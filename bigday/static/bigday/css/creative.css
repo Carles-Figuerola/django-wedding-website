@@ -193,7 +193,7 @@ header {
 }
 
 #main-header {
-    background-image: url('../images/lela-chris-engagement.jpg');
+    background-image: url('../images/banner.jpg');
 }
 
 header .header-content {
@@ -208,7 +208,7 @@ header .header-content .header-content-inner h1 {
     margin-bottom: 0;
     text-transform: uppercase;
     font-weight: 700;
-    color: #fff;
+    color: #000;
 }
 
 header .header-content .header-content-inner hr {

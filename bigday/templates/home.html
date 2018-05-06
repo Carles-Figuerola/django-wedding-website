@@ -15,7 +15,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Chris and Lela's Big Day</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Christine and Carles's Big Day</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -27,7 +27,13 @@
                         <a class="page-scroll" href="#event">Event</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#primrose">Primrose Cottage</a>
+                        <a class="page-scroll" href="#st-clement">St. Clement</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#dank-haus">DANK Haus</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#chicago">Chicago</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#other-stuff">Everything Else</a>
@@ -45,14 +51,12 @@
     <header id="main-header">
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>We did it!!</h1>
-                {% comment %}
+                <h1></h1>
                 <hr>
                 <h2>It's wedding week!</h2>
                 <a href="#welcome" class="btn btn-info btn-xl page-scroll">Welcome</a>
                 <a href="#event" class="btn btn-primary btn-xl page-scroll">Friday</a>
                 <a href="#saturday-event" class="btn btn-success btn-xl page-scroll">Saturday</a>
-                {% endcomment %}
             </div>
         </div>
     </header>
@@ -67,12 +71,12 @@
                     </p>
                     <p>
                         If you're looking for information about the event, look no further!
-                        Please see below for all the details regarding <a href="#event" class="page-scroll">Sunday's event</a>.
+                        Please see below for all the details regarding <a href="#event" class="page-scroll">Saturday's event</a>.
                     </p>
                     <p>
                         Looking forward to seeing everyone soon!
                     </p>
-                    <p class="pull-right">- Chris and Lela</p>
+                    <p class="pull-right">- Christine and Carles</p>
                 </div>
             </div>
         </div>
@@ -82,7 +86,7 @@
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">
                     <a href="#event" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/primrose-garden-nav.jpg' %}" class="img-responsive" alt="">
+                        <img src="{% static 'bigday/images/event-nav.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
@@ -93,12 +97,48 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a href="#primrose" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/primrose-front-nav.jpg' %}" class="img-responsive" alt="">
+                    <a href="#st-clement" class="portfolio-box page-scroll">
+                        <img src="{% static 'bigday/images/st-clement-nav.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
-                                    Primrose Cottage
+                                    St. Clement
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#dank-haus" class="portfolio-box page-scroll">
+                        <img src="{% static 'bigday/images/dank-haus-nav.jpg' %}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    DANK Haus
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#chicago" class="portfolio-box page-scroll">
+                        <img src="{% static 'bigday/images/chicago-nav.jpg' %}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    Chicago
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#accomodations" class="portfolio-box page-scroll">
+                        <img src="{% static 'bigday/images/accomodations-nav.jpg' %}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    Accomodations
                                 </div>
                             </div>
                         </div>
@@ -106,7 +146,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#story" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/lela-chris-cute-nav.jpg' %}" class="img-responsive" alt="">
+                        <img src="{% static 'bigday/images/our-story-nav.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-name">
@@ -120,7 +160,7 @@
         </div>
     </section>
     {% include 'partials/event.html' %}
-    <section id="primrose">
+    <section id="dank-haus">
         {% include 'partials/primrose.html' %}
     </section>
 {% comment %}

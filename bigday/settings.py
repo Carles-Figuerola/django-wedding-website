@@ -25,7 +25,7 @@ SECRET_KEY = 'u7!-y4k1c6b44q507nr_l+c^12o7ur++cpzyn!$65w^!gum@h%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['wedding-env.sk4mphiatm.us-east-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['christineicarles.figuerola.info', 'christineandcarles.figuerola.info', 'candc.figuerola.info', 'cc.figuerola.info', 'localhost']
 
 
 # Application definition
