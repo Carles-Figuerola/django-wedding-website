@@ -128,6 +128,11 @@ aside {
     background-color: transparent;
 }
 
+.mock-link {
+    text-decoration: underline; 
+    cursor: pointer; 
+}
+
 @media(min-width:768px) {
     .navbar-default {
         border-color: rgba(28,56,81,.3);
@@ -305,7 +310,7 @@ header .header-content .header-content-inner p {
     text-align: center;
     color: #fff;
     opacity: 0;
-    background: rgba(240,95,64,.9);
+    background: rgba(81,58,113,.9);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;

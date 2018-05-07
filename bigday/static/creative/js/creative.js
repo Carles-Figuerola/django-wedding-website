@@ -17,6 +17,20 @@
         event.preventDefault();
     });
 
+    // jQuery to change language from english <-> catalan
+    $('a.enable-english').bind('click', function(event) {
+        $('.language-english').removeClass("hidden");
+        $('.language-catalan').addClass("hidden");
+    });
+    $('a.enable-catalan').bind('click', function(event) {
+        $('.language-english').removeClass("hidden");
+        $('.language-catalan').addClass("hidden");
+    });
+    $('a.enable-catalan').bind('click', function(event) {
+        $('.language-catalan').removeClass("hidden");
+        $('.language-english').addClass("hidden");
+    });
+
     // Highlight the top nav as scrolling occurs
     // (specifically turns the links orange)
     $('body').scrollspy({

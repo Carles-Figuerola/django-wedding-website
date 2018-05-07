@@ -15,13 +15,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Christine and Carles's Big Day</a>
+                <a class="lang-eng navbar-brand page-scroll" href="#page-top">Christine and Carles</a>
+                <a class="lang-cat hidden navbar-brand page-scroll" href="#page-top">Christine i Carles</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#main-header">Home</a>
+			    <a class="mock-link enable-catalan" onclick="$('.lang-cat').removeClass('hidden'); $('.lang-eng').addClass('hidden');"><img class="enable-catalan" src="/static/bigday/images/cat.png" /></a>
+                    </li>
+                    <li>
+			    <a class="mock-link enable-english" onclick="$('.lang-eng').removeClass('hidden'); $('.lang-cat').addClass('hidden');"><img class="enable-english" src="/static/bigday/images/eng.png" /></a>
+                    </li>
+                    <li>
+                        <a class="lang-eng page-scroll" href="#main-header">Home</a>
+                        <a class="lang-cat hidden page-scroll" href="#main-header">Inici</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#event">Event</a>
@@ -36,10 +44,12 @@
                         <a class="page-scroll" href="#chicago">Chicago</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#other-stuff">Everything Else</a>
+                        <a class="lang-eng page-scroll" href="#other-stuff">Everything Else</a>
+                        <a class="lang-cat hidden page-scroll" href="#other-stuff">Altres coses</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="lang-eng page-scroll" href="#contact">Contact</a>
+                        <a class="lang-cat hidden page-scroll" href="#contact">Contacte</a>
                     </li>
                 </ul>
             </div>
@@ -53,10 +63,12 @@
             <div class="header-content-inner">
                 <h1></h1>
                 <hr>
+		{% comment %}
                 <h2>It's wedding week!</h2>
                 <a href="#welcome" class="btn btn-info btn-xl page-scroll">Welcome</a>
                 <a href="#event" class="btn btn-primary btn-xl page-scroll">Friday</a>
                 <a href="#saturday-event" class="btn btn-success btn-xl page-scroll">Saturday</a>
+		{% endcomment %}
             </div>
         </div>
     </header>
@@ -64,19 +76,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Welcome!</h2>
+                    <h2 class="lang-eng section-heading">Welcome!</h2>
+                    <h2 class="lang-cat hidden section-heading">Benvinguts!</h2>
                     <hr>
-                    <p>
+                    <p class="lang-eng">
                         Hello friends and family!
                     </p>
-                    <p>
+                    <p class="lang-eng">
                         If you're looking for information about the event, look no further!
                         Please see below for all the details regarding <a href="#event" class="page-scroll">Saturday's event</a>.
                     </p>
-                    <p>
+                    <p class="lang-eng">
                         Looking forward to seeing everyone soon!
                     </p>
-                    <p class="pull-right">- Christine and Carles</p>
+                    <p class="lang-eng pull-right">- Christine and Carles</p>
+                    <p class="lang-cat hidden">
+                        Benvinguts Amics i família!
+                    </p>
+                    <p class="lang-cat hidden">
+		        Si esteu buscant per informació sobre l'event, ja l'heu trobat!
+			Aquí sota teniu tots els detalls sobre <a href="#event" class="page-scroll">la boda</a>.
+                    </p>
+                    <p class="lang-cat hidden">
+		        Esperem Veure-us a tots molt aviat!
+                    </p>
+                    <p class="lang-cat hidden pull-right">- Christine i Carles</p>
                 </div>
             </div>
         </div>
@@ -161,11 +185,9 @@
     </section>
     {% include 'partials/event.html' %}
     <section id="dank-haus">
-        {% include 'partials/primrose.html' %}
+        {% include 'partials/dank-haus.html' %}
     </section>
-{% comment %}
         {% include 'partials/wedding-party.html' %}
-{% endcomment %}
     <section id="other-stuff" class="bg-primary">
         {% include 'partials/misc.html' %}
     </section>
