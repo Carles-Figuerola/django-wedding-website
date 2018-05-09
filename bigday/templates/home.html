@@ -32,13 +32,8 @@
                         <a class="lang-cat hidden page-scroll" href="#main-header">Inici</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#event">Event</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#st-clement">St. Clement</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#dank-haus">DANK Haus</a>
+                        <a class="lang-eng page-scroll" href="#event">Details</a>
+                        <a class="lang-cat hidden page-scroll" href="#event">Detalls</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#chicago">Chicago</a>
@@ -61,9 +56,9 @@
     <header id="main-header">
         <div class="header-content">
             <div class="header-content-inner">
+		{% comment %}
                 <h1></h1>
                 <hr>
-		{% comment %}
                 <h2>It's wedding week!</h2>
                 <a href="#welcome" class="btn btn-info btn-xl page-scroll">Welcome</a>
                 <a href="#event" class="btn btn-primary btn-xl page-scroll">Friday</a>
@@ -90,6 +85,7 @@
                         Looking forward to seeing everyone soon!
                     </p>
                     <p class="lang-eng pull-right">- Christine and Carles</p>
+
                     <p class="lang-cat hidden">
                         Benvinguts Amics i família!
                     </p>
@@ -113,8 +109,11 @@
                         <img src="{% static 'bigday/images/event-nav.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
-                                <div class="project-name">
-                                    The Event
+                                <div class="lang-eng project-name">
+                                    Details
+                                </div>
+                                <div class="lang-cat hidden project-name">
+                                    Detalls
                                 </div>
                             </div>
                         </div>
@@ -125,7 +124,10 @@
                         <img src="{% static 'bigday/images/st-clement-nav.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
-                                <div class="project-name">
+                                <div class="lang-eng project-name">
+                                    St. Clement
+                                </div>
+                                <div class="lang-cat hidden project-name">
                                     St. Clement
                                 </div>
                             </div>
@@ -137,7 +139,10 @@
                         <img src="{% static 'bigday/images/dank-haus-nav.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
-                                <div class="project-name">
+                                <div class="lang-eng project-name">
+                                    DANK Haus 
+                                </div>
+                                <div class="lang-cat hidden project-name">
                                     DANK Haus
                                 </div>
                             </div>
@@ -161,8 +166,11 @@
                         <img src="{% static 'bigday/images/accomodations-nav.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
-                                <div class="project-name">
+                                <div class="lang-eng project-name">
                                     Accomodations
+                                </div>
+                                <div class="lang-cat hidden project-name">
+                                    Acomodacions
                                 </div>
                             </div>
                         </div>
@@ -173,8 +181,11 @@
                         <img src="{% static 'bigday/images/our-story-nav.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
-                                <div class="project-name">
+                                <div class="lang-eng project-name">
                                     Our Story
+                                </div>
+                                <div class="lang-cat hidden project-name">
+                                    La nostra història
                                 </div>
                             </div>
                         </div>
@@ -184,10 +195,13 @@
         </div>
     </section>
     {% include 'partials/event.html' %}
-    <section id="dank-haus">
+    <section id="st-clement">
+        {% include 'partials/st-clement.html' %}
+    </section>
+    <section id="dank-haus" class="bg-info">
         {% include 'partials/dank-haus.html' %}
     </section>
-        {% include 'partials/wedding-party.html' %}
+        {% comment %}{% include 'partials/wedding-party.html' %}{% endcomment %}
     <section id="other-stuff" class="bg-primary">
         {% include 'partials/misc.html' %}
     </section>
