@@ -127,13 +127,13 @@ STATICFILES_DIRS = (
 )
 
 # the address your emails (save the dates/invites/etc.) will come from
-DEFAULT_WEDDING_FROM_EMAIL = 'Chris and Lela <chris.plus.lela@gmail.com>'
+DEFAULT_WEDDING_FROM_EMAIL = 'Christine and Carles <christine.carles@figuerola.info>'
 # the default reply-to of your emails
-DEFAULT_WEDDING_REPLY_EMAIL = 'chris.plus.lela@gmail.com'
+DEFAULT_WEDDING_REPLY_EMAIL = 'christine.carles@figuerola.info'
 
 # when sending test emails it will use this address
 DEFAULT_WEDDING_TEST_EMAIL = DEFAULT_WEDDING_FROM_EMAIL
-WEDDING_CC_LIST = ['cwarren13@gmail.com', 'slconnely02@gmail.com']  # put email addresses here if you want to cc someone on all your invitations
+WEDDING_CC_LIST = ['carlesgf@gmail.com', 'ca_dobies@yahoo.com']  # put email addresses here if you want to cc someone on all your invitations
 
 try:
     from .localsettings import *
