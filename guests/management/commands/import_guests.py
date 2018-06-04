@@ -5,5 +5,9 @@ from guests import csv_import
 class Command(BaseCommand):
     filename = 'guests-file.csv'
 
+    def add_arguments(self, parser):
+        parser.add_argument('path', type=str)
+
     def handle(self, *args, **kwargs):
-        csv_import.import_guests('/home/carles/src/django-wedding-website/guests-test.csv')
+        path = kwargs['path'] 
+        csv_import.import_guests(path)

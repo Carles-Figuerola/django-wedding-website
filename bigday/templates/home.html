@@ -22,10 +22,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-			    <a class="mock-link enable-catalan" onclick="$('.lang-cat').removeClass('hidden'); $('.lang-eng').addClass('hidden');"><img class="enable-catalan" src="/static/bigday/images/cat15.png" /></a>
+			    <a class="mock-link enable-catalan" onclick="setLanguage('cat');"><img class="enable-catalan" src="/static/bigday/images/cat15.png" /></a>
                     </li>
                     <li>
-			    <a class="mock-link enable-english" onclick="$('.lang-eng').removeClass('hidden'); $('.lang-cat').addClass('hidden');"><img class="enable-english" src="/static/bigday/images/eng15.png" /></a>
+			    <a class="mock-link enable-english" onclick="setLanguage('eng');"><img class="enable-english" src="/static/bigday/images/eng15.png" /></a>
                     </li>
                     <!--<li>
                         <a class="lang-eng page-scroll" href="#main-header">Home</a>
@@ -71,21 +71,7 @@
         </div>
     </header>
     <section class="bg-primary" id="welcome">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="lang-eng section-heading">Welcome!</h2>
-                    <h2 class="lang-cat hidden section-heading">Benvinguts!</h2>
-                    <hr>
-                    <p class="lang-eng">
-                        Please tap on the pictures below or scroll down for details on our wedding celebration!
-                    </p>
-                    <p class="lang-cat hidden">
-                        Si us plau, toqueu les fotografies d'aquí baix o TODO
-                    </p>
-                </div>
-            </div>
-        </div>
+        {% include 'partials/welcome.html' %}
     </section>
     <section class="no-padding" id="navigation">
         <div class="container-fluid">
@@ -187,17 +173,22 @@
     <section id="dank-haus" class="bg-info">
         {% include 'partials/dank-haus.html' %}
     </section>
-        {% comment %}{% include 'partials/wedding-party.html' %}{% endcomment %}
-    <section id="other-stuff" class="bg-primary">
+    {% comment %}<section id="other-stuff" class="bg-primary">
         {% include 'partials/misc.html' %}
+    </section>{% endcomment %}
+    <section id="chicago" class="">
+        {% include 'partials/chicago.html' %}
     </section>
-    <section id="registry">
+    <section id="registry" class="bg-info">
         {% include 'partials/registry.html' %}
     </section>
-    <section id="story" class="bg-dark">
+    <section id="story" class="bg-primary">
         {% include 'partials/story.html' %}
     </section>
-    {% include 'partials/proposal.html' %}
+    <section id="proposal">
+        {% include 'partials/proposal.html' %}
+    </section>
+        {% include 'partials/wedding-party.html' %}
     <section id="contact" class="bg-dark">
         <div class="container">
             <div class="row">

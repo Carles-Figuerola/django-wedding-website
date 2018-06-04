@@ -40,6 +40,8 @@
     <script src="{% static 'bigday/js/footer.js' %}"></script>
     <script>
         $(document).ready(function() {
+            setInitialLanguage();
+            setInitialLanguage();
             setFooterStyle();
             setFooterStyle();  // hack, for some reason this needs to be called twice on load
             window.onresize = setFooterStyle;

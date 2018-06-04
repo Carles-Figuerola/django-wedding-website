@@ -490,6 +490,14 @@ fieldset[disabled] .btn-primary.active {
     padding: 15px 30px;
 }
 
+.chicago-hideshow {
+    cursor: pointer;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
 ::-moz-selection {
     text-shadow: none;
     color: #fff;
@@ -515,6 +523,16 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #222;
 
+}
+
+@media(min-width:768px) {
+    .dl-horizontal dt {
+        width: 200px;
+    }
+
+    .dl-horizontal dd {
+        margin-left: 220px;
+    }
 }
 
 #footer {
