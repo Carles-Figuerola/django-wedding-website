@@ -28,15 +28,12 @@ function setLanguage(language) {
     $('.lang-'+language).removeClass('hidden');
 }
 
-function hideChicagoSection(section, language) {
-    $('.chicago-'+section+'-'+language+'-original').removeClass('hidden');
-    $('.chicago-'+section+'-'+language).addClass('hidden');
+function hideChicagoSection(section) {
+    $('.chicago-'+section+'-original').removeClass('hidden');
+    $('.chicago-'+section).addClass('hidden');
 }
 
-function showChicagoSection(section, language) {
-    $('.chicago-'+section+'-'+language+'-original').addClass('hidden');
-    $('.chicago-'+section+'-'+language).removeClass('hidden');
+function showChicagoSection(section) {
+    $('.chicago-'+section+'-original').addClass('hidden');
+    $('.chicago-'+section).removeClass('hidden');
 }
-
-function noRSVPYet(language){
-    }
