@@ -25,6 +25,14 @@ hr.light {
     border-color: #fff;
 }
 
+.bg-primary a {
+    color: #000
+}
+
+.bg-info a {
+    color: #000
+}
+
 a {
     color: #617382;
     -webkit-transition: all .35s;
