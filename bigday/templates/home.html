@@ -27,10 +27,10 @@
                     <li>
 			    <a class="mock-link enable-english" onclick="setLanguage('eng');"><img class="enable-english" src="/static/bigday/images/eng15.png" /></a>
                     </li>
-                    <!--<li>
-                        <a class="lang-eng page-scroll" href="#main-header">Home</a>
-                        <a class="lang-cat hidden page-scroll" href="#main-header">Inici</a>
-                    </li>-->
+                    <li>
+                        <a class="lang-eng page-scroll" href="#navigation">Menu</a>
+                        <a class="lang-cat hidden page-scroll" href="#navigation">Menú</a>
+                    </li>
                     <li>
                         <a class="lang-eng page-scroll" href="#event">Overview</a>
                         <a class="lang-cat hidden page-scroll" href="#event">Resum</a>
@@ -179,6 +179,9 @@
     <section id="chicago" class="">
         {% include 'partials/chicago.html' %}
     </section>
+    <section id="accomodations" class="bg-info">
+        {% include 'partials/accomodations.html' %}
+    </section>
     <section id="story" class="bg-primary">
         {% include 'partials/story.html' %}
     </section>
@@ -189,22 +192,20 @@
         <div class="container">
         <div class="row text-center">
             <div class="lang-eng">
-                <a href="https://photos.app.goo.gl/G3YwytSn2pe5cL278"><i class="fa fa-images fa-4x"></i></a>
-                <p>
-                <a href="https://photos.app.goo.gl/G3YwytSn2pe5cL278">Click here to see some pictures</a>
-                </p>
+                <a href="https://photos.app.goo.gl/G3YwytSn2pe5cL278"><i class="fa fa-images fa-4x"></i><br>
+                    Click here to see some pictures of us!
+                </a>
             </div>
             <div class="col-lg-12 col-md-12 lang-cat hidden">
-                <i class="fa fa-images fa-4x"></i>
-                <p>
-                    Click here to see some pictures
-                </p>
+                <a href="https://photos.app.goo.gl/G3YwytSn2pe5cL278"><i class="fa fa-images fa-4x"></i><br>
+                Cliqueu aquí per veure algunes imatges nostres!
+                </a>
             </div>
         </div>
         </div>
     </section>
-        {% include 'partials/wedding-party.html' %}
-    <section id="registry" class="bg-info">
+    {% comment %}{% include 'partials/wedding-party.html' %} {% endcomment %}
+    <section id="registry" class="bg-primary">
         {% include 'partials/registry.html' %}
     </section>
     <section id="contact" class="bg-dark">
@@ -216,8 +217,8 @@
                     <p>If you have any questions don't hesitate to reach out!</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="mailto:{{support_email}}"><i class="far fa-envelope fa-3x wow bounceIn" data-wow-delay=".1s"></i></a>
-                    <p><a href="mailto:{{ support_email }}">{{ support_email }}</a></p>
+                    <a href="mailto:{{support_email}}"><i class="far fa-envelope fa-3x wow bounceIn" data-wow-delay=".1s"></i><br>
+                    {{ support_email }}
                 </div>
             </div>
         </div>
