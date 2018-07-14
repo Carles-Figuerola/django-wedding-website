@@ -38,17 +38,17 @@
                     <li>
                         <a class="page-scroll" href="#chicago">Chicago</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a class="page-scroll" href="#rsvp">RSVP</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a class="lang-eng page-scroll" href="#gallery">Gallery</a>
                         <a class="lang-cat hidden page-scroll" href="#gallery">Galeria</a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a class="lang-eng page-scroll" href="#registry">Registry</a>
                         <a class="lang-cat hidden page-scroll" href="#registry">Registre</a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -189,35 +189,52 @@
         {% include 'partials/proposal.html' %}
     </section>
     <section id="gallery" class="bg-info">
-        <div class="container">
-        <div class="row text-center">
-            <div class="lang-eng">
-                <a href="https://photos.app.goo.gl/G3YwytSn2pe5cL278"><i class="fa fa-images fa-4x"></i><br>
-                    Click here to see some pictures of us!
-                </a>
+        <div class="container text-center">
+            <h2 class="lang-eng section-heading">Gallery</h2>
+            <h2 class="lang-cat hidden section-heading">Galeria</h2>
+            <hr class="light">
+            <div class="">
+                <div class="row text-center">
+                    <div class="lang-eng">
+                        <a style="color: #fff;" href="https://photos.app.goo.gl/G3YwytSn2pe5cL278"><i class="fa fa-images fa-4x"></i><br>
+                            Click here to see some pictures of us!
+                        </a>
+                    </div>
+                    <div style="color: #fff;" class="col-lg-12 col-md-12 lang-cat hidden">
+                        <a style="color: #fff" href="https://photos.app.goo.gl/G3YwytSn2pe5cL278"><i class="fa fa-images fa-4x"></i><br>
+                        Cliqueu aquí per veure algunes imatges nostres!
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-12 col-md-12 lang-cat hidden">
-                <a href="https://photos.app.goo.gl/G3YwytSn2pe5cL278"><i class="fa fa-images fa-4x"></i><br>
-                Cliqueu aquí per veure algunes imatges nostres!
-                </a>
-            </div>
-        </div>
         </div>
     </section>
     {% comment %}{% include 'partials/wedding-party.html' %} {% endcomment %}
-    <section id="registry" class="bg-primary">
+    <!--<section id="registry" class="bg-primary">
         {% include 'partials/registry.html' %}
-    </section>
+    </section>-->
     <section id="contact" class="bg-dark">
         <div class="container">
-            <div class="row">
+            <div class="row lang-eng">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Contact us!</h2>
                     <hr class="primary">
                     <p>If you have any questions don't hesitate to reach out!</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="mailto:{{support_email}}"><i class="far fa-envelope fa-3x wow bounceIn" data-wow-delay=".1s"></i><br>
+                    <a style="color: #fff;" href="mailto:{{support_email}}"><i class="far fa-envelope fa-3x wow bounceIn" data-wow-delay=".1s"></i><br>
+                    {{ support_email }}
+                </div>
+            </div>
+            <!-- CATALA -->
+            <div class="row lang-cat hidden">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Contacta amb nosaltres!</h2>
+                    <hr class="primary">
+                    <p>Si teniu alguna pregunta, no dubteu en dir-nos-ho!</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a style="color: #fff;" href="mailto:{{support_email}}"><i class="far fa-envelope fa-3x wow bounceIn" data-wow-delay=".1s"></i><br>
                     {{ support_email }}
                 </div>
             </div>

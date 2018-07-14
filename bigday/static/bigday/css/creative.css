@@ -534,6 +534,14 @@ body {
 }
 
 @media(min-width:768px) {
+    .getting-there dd {
+        margin-left: 170px !important;
+    }
+
+    .getting-there dt {
+        width: 150px !important;
+    }
+
     .dl-horizontal dt {
         width: 200px;
     }
@@ -541,6 +549,7 @@ body {
     .dl-horizontal dd {
         margin-left: 220px;
     }
+
 }
 
 #footer {
