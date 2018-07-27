@@ -15,8 +15,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="lang-eng navbar-brand page-scroll" href="#page-top">Carles and Christine</a>
-                <a class="lang-cat hidden navbar-brand page-scroll" href="#page-top">Carles i Christine</a>
+                <!-- <a class="lang-eng navbar-brand page-scroll" href="#page-top">Carles and Christine</a> -->
+                <a class="navbar-brand page-scroll" href="#page-top">Carles <i class="far fa-heart"></i> Christine</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -122,6 +122,21 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
+                    <a href="#story" class="portfolio-box page-scroll">
+                        <img src="{% static 'bigday/images/our-story-nav.jpg' %}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="lang-eng project-name">
+                                    Our Story
+                                </div>
+                                <div class="lang-cat hidden project-name">
+                                    La nostra història
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
                     <a href="#chicago" class="portfolio-box page-scroll">
                         <img src="{% static 'bigday/images/chicago-nav.jpg' %}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
@@ -148,21 +163,6 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#story" class="portfolio-box page-scroll">
-                        <img src="{% static 'bigday/images/our-story-nav.jpg' %}" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="lang-eng project-name">
-                                    Our Story
-                                </div>
-                                <div class="lang-cat hidden project-name">
-                                    La nostra història
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
             </div>
         </div>
     </section>
@@ -173,15 +173,7 @@
     <section id="dank-haus" class="bg-info">
         {% include 'partials/dank-haus.html' %}
     </section>
-    {% comment %}<section id="other-stuff" class="bg-primary">
-        {% include 'partials/misc.html' %}
-    </section>{% endcomment %}
-    <section id="chicago" class="">
-        {% include 'partials/chicago.html' %}
-    </section>
-    <section id="accomodations" class="bg-info">
-        {% include 'partials/accomodations.html' %}
-    </section>
+    <!-- moved this --> 
     <section id="story" class="bg-primary">
         {% include 'partials/story.html' %}
     </section>
@@ -189,30 +181,22 @@
         {% include 'partials/proposal.html' %}
     </section>
     <section id="gallery" class="bg-info">
-        <div class="container text-center">
-            <h2 class="lang-eng section-heading">Gallery</h2>
-            <h2 class="lang-cat hidden section-heading">Galeria</h2>
-            <hr class="light">
-            <div class="">
-                <div class="row text-center">
-                    <div class="lang-eng">
-                        <a style="color: #fff;" href="https://photos.app.goo.gl/G3YwytSn2pe5cL278"><i class="fa fa-images fa-4x"></i><br>
-                            Click here to see some pictures of us!
-                        </a>
-                    </div>
-                    <div style="color: #fff;" class="col-lg-12 col-md-12 lang-cat hidden">
-                        <a style="color: #fff" href="https://photos.app.goo.gl/G3YwytSn2pe5cL278"><i class="fa fa-images fa-4x"></i><br>
-                        Cliqueu aquí per veure algunes imatges nostres!
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% include 'partials/gallery.html' %}
     </section>
+    <!-- moved this -->
+
+    <section id="chicago" class="">
+        {% include 'partials/chicago.html' %}
+    </section>
+    <section id="accomodations" class="bg-info">
+        {% include 'partials/accomodations.html' %}
+    </section>
+
     {% comment %}{% include 'partials/wedding-party.html' %} {% endcomment %}
-    <!--<section id="registry" class="bg-primary">
+    {% comment %}<section id="registry" class="bg-primary">
         {% include 'partials/registry.html' %}
-    </section>-->
+    </section>{% endcomment %}
+
     <section id="contact" class="bg-dark">
         <div class="container">
             <div class="row lang-eng">

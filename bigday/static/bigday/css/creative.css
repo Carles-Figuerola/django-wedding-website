@@ -534,6 +534,10 @@ body {
 }
 
 @media(min-width:768px) {
+    .small-br {
+        display: none;
+    }
+
     .getting-there dd {
         margin-left: 170px !important;
     }
