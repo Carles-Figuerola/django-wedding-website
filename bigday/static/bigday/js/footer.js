@@ -11,10 +11,11 @@ function setFooterStyle() {
 }
 
 function setInitialLanguage() {
+    if (location.hostname.startsWith('carlesichristine')) {
+        setLanguage('cat');
+    }
     if (navigator.language.startsWith('es') || navigator.language.startsWith('ca')) {
         setLanguage('cat');
-        //$('.lang-cat').removeClass('hidden');
-        //$('.lang-eng').addClass('hidden');
     }
 }
 
