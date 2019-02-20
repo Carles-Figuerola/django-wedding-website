@@ -45,10 +45,10 @@
                         <a class="lang-eng page-scroll" href="#gallery">Gallery</a>
                         <a class="lang-cat hidden page-scroll" href="#gallery">Galeria</a>
                     </li>
-                    <!--<li>
+                    <li>
                         <a class="lang-eng page-scroll" href="#registry">Registry</a>
                         <a class="lang-cat hidden page-scroll" href="#registry">Registre</a>
-                    </li>-->
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -59,18 +59,37 @@
     <header id="main-header">
         <div class="header-content">
             <div class="header-content-inner">
+            <div onclick="$('#RSVPeng').modal()" class="lang-eng pointer btn btn-primary btn-lg">
+                <div class="text-center"><i class="far fa-2x fa-envelope-open"></i></div>
+                    RSVP
+            </div>
+            <div onclick="$('#RSVPcat').modal()" class="hidden lang-cat pointer btn btn-primary btn-lg">
+                <div class="text-center"><i class="far fa-2x fa-envelope-open"></i></div>
+                    Respon
+            </div>
+            {% comment %}
+            <br /><br />
+            <a href="#registry" class="lang-eng pointer btn btn-primary btn-lg page-scroll">
+                <div class="text-center"><i class="fas fa-2x fa-gift"></i></div>
+                    Registry
+            </a>
+            <a href="#registry" class="hidden lang-cat pointer btn btn-primary btn-lg page-scroll">
+                <div class="text-center"><i class="fas fa-2x fa-gift"></i></div>
+                    Registre
+            </a>
+            {% endcomment %}
 		{% comment %}
                 <h1></h1>
                 <hr>
                 <h2>It's wedding week!</h2>
-                <a href="#welcome" class="btn btn-info btn-xl page-scroll">Welcome</a>
+                <a href="#RSVP" class="btn btn-info btn-xl page-scroll">Welcome</a>
                 <a href="#event" class="btn btn-primary btn-xl page-scroll">Friday</a>
                 <a href="#saturday-event" class="btn btn-success btn-xl page-scroll">Saturday</a>
 		{% endcomment %}
             </div>
         </div>
     </header>
-    <section class="bg-primary" id="welcome">
+    <section class="bg-primary" id="RSVP">
         {% include 'partials/welcome.html' %}
     </section>
     <section class="no-padding" id="navigation">
@@ -192,10 +211,10 @@
         {% include 'partials/accomodations.html' %}
     </section>
 
-    {% comment %}{% include 'partials/wedding-party.html' %} {% endcomment %}
-    {% comment %}<section id="registry" class="bg-primary">
+    {% include 'partials/wedding-party.html' %}
+    <section id="registry" class="bg-primary">
         {% include 'partials/registry.html' %}
-    </section>{% endcomment %}
+    </section>
 
     <section id="contact" class="bg-dark">
         <div class="container">
