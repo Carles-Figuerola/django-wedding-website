@@ -15,9 +15,28 @@ def home(request):
     return render(request, 'home.html', context={
         'save_the_dates': SAVE_THE_DATE_CONTEXT_MAP,
         'support_email': settings.DEFAULT_WEDDING_REPLY_EMAIL,
-        'expedia_coupon': 'BEYONDBORDERS',
+        'expedia_coupon': 'VENTUREOUT',
         'hcom_coupon': 'FNFQ118:AF5JU5',
-        'hcom_coupon_url': 'https://www.hotels.com/?rffrid=eml.hcom.UK.300.00.2018.10.30.src00.00.00.0000.0000.00.0000.DD00.kwrd=MER.AQ.TYU.eml.0.0.ff_booknow',
+        'hcom_coupon_url': 'https://www.hotels.com/',
+        'debug': debug,
+        'mode': mode
+    })
+
+def barcelona(request):
+    query_params = request.GET
+    debug = False
+    if 'debug' in query_params:
+        if query_params['debug'].lower() == "true":
+            debug = True
+    mode = ""
+    if 'mode' in query_params:
+        mode = query_params['mode']
+    return render(request, 'barcelona.html', context={
+        'save_the_dates': SAVE_THE_DATE_CONTEXT_MAP,
+        'support_email': settings.DEFAULT_WEDDING_REPLY_EMAIL,
+        'expedia_coupon': 'VENTUREOUT',
+        'hcom_coupon': 'FNFQ118:AF5JU5',
+        'hcom_coupon_url': 'https://www.hotels.com/',
         'debug': debug,
         'mode': mode
     })

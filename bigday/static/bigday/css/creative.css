@@ -211,7 +211,7 @@ header {
 }
 
 #main-header {
-    background-image: url('../images/banner.jpg');
+    background-image: url('../images/bcn_banner.jpg');
 }
 
 header .header-content {
@@ -305,7 +305,6 @@ header .header-content .header-content-inner p {
         margin: 20px auto 0;
     }
 }
-
 
 .portfolio-box {
     display: block;
@@ -553,7 +552,38 @@ body {
     .dl-horizontal dd {
         margin-left: 220px;
     }
+}
 
+.countdown-centered {
+    float: none;
+    margin: 0 auto;
+    width: 640px;
+}
+
+.flip-clock-label {
+    visibility: hidden;
+}
+
+@media(max-width:768px) {
+    .countdown {
+        zoom: 0.7;
+        -moz-transform: scale(0.7)
+    }
+
+    .countdown-centered {
+        width: 320px;
+    }
+}
+
+@media(max-width:512px) {
+    .countdown {
+        scale: 0.5;
+        -moz-transform: scale(0.5)
+    }
+
+    .countdown-centered {
+        width: 320px;
+    }
 }
 
 #footer {

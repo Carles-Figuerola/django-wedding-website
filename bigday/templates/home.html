@@ -59,6 +59,9 @@
     <header id="main-header">
         <div class="header-content">
             <div class="header-content-inner">
+            {% comment %}
+            {% include 'partials/counter.html' %}
+            {% else %}
             <div onclick="$('#RSVPeng').modal()" class="lang-eng pointer btn btn-primary btn-lg">
                 <div class="text-center"><i class="far fa-2x fa-envelope-open"></i></div>
                     RSVP
@@ -67,7 +70,6 @@
                 <div class="text-center"><i class="far fa-2x fa-envelope-open"></i></div>
                     Respon
             </div>
-            {% comment %}
             <br /><br />
             <a href="#registry" class="lang-eng pointer btn btn-primary btn-lg page-scroll">
                 <div class="text-center"><i class="fas fa-2x fa-gift"></i></div>
