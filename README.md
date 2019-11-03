@@ -92,6 +92,9 @@ Just access `/dashboard/` from an account with admin access. Your other guests w
 
 You can easily hook up Google analytics by editing the tracking ID in `google-analytics.html`.
 
+### HTTPS Certificate
+
+If you want to have an https endpoint for your website for free, you can use traefik with letsencrypt.org to get. This repo includes a traefik.toml file (for traefik versions prior to 2.0) that reverse proxies into your site and adds a valid certificate for your webiste. 
 
 ## Installation
 

@@ -1,0 +1,238 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block page_head %}
+    <!-- Custom CSS -->
+    <link href="{% static 'bigday/css/creative.css' %}" rel="stylesheet">
+{% endblock %}
+{% block page_content %}
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="lang-eng navbar-brand page-scroll" href="#page-top">Carles and Christine</a> -->
+                <a class="navbar-brand page-scroll" href="#page-top">Carles <i class="far fa-heart"></i> Christine</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+			    <a class="mock-link enable-catalan" onclick="setLanguage('cat');"><img class="enable-catalan" src="/static/bigday/images/cat15.png" /></a>
+                    </li>
+                    <li>
+			    <a class="mock-link enable-english" onclick="setLanguage('eng');"><img class="enable-english" src="/static/bigday/images/eng15.png" /></a>
+                    </li>
+                    <li>
+                        <a class="lang-eng page-scroll" href="#navigation">Menu</a>
+                        <a class="lang-cat hidden page-scroll" href="#navigation">Menú</a>
+                    </li>
+                    <li>
+                        <a class="lang-eng page-scroll" href="#event">Overview</a>
+                        <a class="lang-cat hidden page-scroll" href="#event">Resum</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#chicago">Chicago</a>
+                    </li>
+                    <!-- <li>
+                        <a class="page-scroll" href="#rsvp">RSVP</a>
+                    </li> -->
+                    <li>
+                        <a class="lang-eng page-scroll" href="#gallery">Gallery</a>
+                        <a class="lang-cat hidden page-scroll" href="#gallery">Galeria</a>
+                    </li>
+                    <li>
+                        <a class="lang-eng page-scroll" href="#registry">Registry</a>
+                        <a class="lang-cat hidden page-scroll" href="#registry">Registre</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    {% block main %}
+    <header id="main-header">
+        <div class="header-content">
+            <div class="header-content-inner">
+            <div onclick="$('#noRSVPeng').modal()" class="lang-eng pointer btn btn-primary btn-lg">
+                <div class="text-center"><i class="far fa-2x fa-envelope-open"></i></div>
+                    RSVP
+            </div>
+            <div onclick="$('#noRSVPcat').modal()" class="hidden lang-cat pointer btn btn-primary btn-lg">
+                <div class="text-center"><i class="far fa-2x fa-envelope-open"></i></div>
+                    Respon
+            </div>
+            {% endif %}
+            </div>
+        </div>
+    </header>
+    <section class="bg-primary" id="RSVP">
+        {% include 'partials/welcome.html' %}
+    </section>
+    <section class="no-padding" id="navigation">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#event" class="portfolio-box page-scroll">
+                        <img src="{% static 'bigday/images/event-nav.jpg' %}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="lang-eng project-name">
+                                    <b>Overview</b>
+                                </div>
+                                <div class="lang-cat hidden project-name">
+                                    <b>Resum</b>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#st-clement" class="portfolio-box page-scroll">
+                        <img src="{% static 'bigday/images/st-clement-nav.jpg' %}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="lang-eng project-name">
+                                    <b>St. Clement</b><br><span class="small">Ceremony</span>
+                                </div>
+                                <div class="lang-cat hidden project-name">
+                                    <b>St. Clement</b><br><span class="small">Cerimònia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#dank-haus" class="portfolio-box page-scroll">
+                        <img src="{% static 'bigday/images/dank-haus-nav.jpg' %}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="lang-eng project-name">
+                                    <b>DANK Haus</b><br><span class="small">Reception</span>
+                                </div>
+                                <div class="lang-cat hidden project-name">
+                                    <b>DANK Haus</b><br><span class="small">Recepció</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#story" class="portfolio-box page-scroll">
+                        <img src="{% static 'bigday/images/our-story-nav.jpg' %}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="lang-eng project-name">
+                                    <b>Our Story</b><br><span class="small">and The Proposal</span>
+                                </div>
+                                <div class="lang-cat hidden project-name">
+                                    <b>La nostra història</b><br><span class="small">i El proposament</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#chicago" class="portfolio-box page-scroll">
+                        <img src="{% static 'bigday/images/chicago-nav.jpg' %}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    <b>Chicago</b>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#accomodations" class="portfolio-box page-scroll">
+                        <img src="{% static 'bigday/images/accomodations-nav.jpg' %}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="lang-eng project-name">
+                                    <b>Accomodations</b>
+                                </div>
+                                <div class="lang-cat hidden project-name">
+                                    <b>Acomodacions</b>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'partials/event.html' %}
+    <section id="st-clement">
+        {% include 'partials/st-clement.html' %}
+    </section>
+    <section id="dank-haus" class="bg-info">
+        {% include 'partials/dank-haus.html' %}
+    </section>
+    <!-- moved this --> 
+    <section id="story" class="bg-primary">
+        {% include 'partials/story.html' %}
+    </section>
+    <section id="proposal">
+        {% include 'partials/proposal.html' %}
+    </section>
+    <section id="gallery" class="bg-info">
+        {% include 'partials/gallery.html' %}
+    </section>
+    <!-- moved this -->
+
+    <section id="chicago" class="">
+        {% include 'partials/chicago.html' %}
+    </section>
+    <section id="accomodations" class="bg-info">
+        {% include 'partials/accomodations.html' %}
+    </section>
+
+    {% include 'partials/wedding-party.html' %}
+    <section id="registry" class="bg-primary">
+        {% include 'partials/registry.html' %}
+    </section>
+
+    <section id="contact" class="bg-dark">
+        <div class="container">
+            <div class="row lang-eng">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Contact us!</h2>
+                    <hr class="primary">
+                    <p>If you have any questions don't hesitate to reach out!</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a style="color: #fff;" href="mailto:{{support_email}}"><i class="far fa-envelope fa-3x wow bounceIn" data-wow-delay=".1s"></i><br>
+                    {{ support_email }}
+                </div>
+            </div>
+            <!-- CATALA -->
+            <div class="row lang-cat hidden">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Contacta amb nosaltres!</h2>
+                    <hr class="primary">
+                    <p>Si teniu alguna pregunta, no dubteu en dir-nos-ho!</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a style="color: #fff;" href="mailto:{{support_email}}"><i class="far fa-envelope fa-3x wow bounceIn" data-wow-delay=".1s"></i><br>
+                    {{ support_email }}
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}
+{% endblock %}
+{% block page_js %}
+    <!-- Plugin JavaScript -->
+    <!-- Easing is for the vertical scroll animations -->
+    <script src="{% static 'creative/js/jquery.easing.min.js' %}"></script>
+    <!-- Automatically fit text based on screen size.-->
+    <script src="{% static 'creative/js/jquery.fittext.js' %}"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="{% static 'creative/js/creative.js' %}"></script>
+{% endblock %}

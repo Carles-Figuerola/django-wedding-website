@@ -1,0 +1,98 @@
+<div class="container">
+    <br />
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2 class="lang-eng section-heading">Welcome!</h2>
+            <h2 class="lang-cat hidden section-heading">Benvinguts!</h2>
+            <hr class="light">
+            <p class="lang-eng">
+                Please tap on the pictures below or scroll down for details on our wedding celebration!
+            </p>
+            <p class="lang-cat hidden">
+                Toqueu les fotografies d'aquí baix o desplaceu-vos cap avall per veure més detalls sobre el nostre casament!
+            </p>
+            <br>
+            <!-- https://docs.google.com/forms/d/e/1FAIpQLSfzYClfmlxJIiqBQXpBCWsoGgz0gLLhjTove1r0HxGbBgEHgA/viewform?hl=en -->
+            <!-- https://docs.google.com/forms/d/e/1FAIpQLSfzYClfmlxJIiqBQXpBCWsoGgz0gLLhjTove1r0HxGbBgEHgA/viewform?hl=ca -->
+            <div onclick="$('#RSVPeng').modal()" class="lang-eng pointer">
+                <div class="text-center"><i class="far fa-4x fa-envelope-open"></i></div>
+                <br>
+                <p class="section-heading text-center">
+                    RSVP Here
+                </p>
+            </div>
+            <div onclick="$('#RSVPcat').modal()" class="lang-cat hidden pointer">
+                <div class="text-center"><i class="far fa-4x fa-envelope-open"></i></div>
+                <br>
+                <p class="section-heading text-center">
+                    Respon Aquí
+                </p>
+            </div>
+  <!-- Modal -->
+  <div class="modal fade" id="noRSVPeng" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body text-primary">
+          <p>Our RSVP form is still not ready, please come back later!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="RSVPeng" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body text-primary">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfzYClfmlxJIiqBQXpBCWsoGgz0gLLhjTove1r0HxGbBgEHgA/viewform?embedded=true" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0">It&#39;s loading...</iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="noRSVPcat" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body text-primary">
+          <p>No tenim el formulari preparat encara, si us plau, torneu més tard!.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Tanca</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="RSVPcat" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body text-primary">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf5X4WWnEX8lPi9IglYtDKWfW0SQ0PZyukf-COmbqu8fKC6tQ/viewform?embedded=true" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0">S&#39;està carregant...</iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Tanca</button>
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>          
+    </div>
+</div>
+
